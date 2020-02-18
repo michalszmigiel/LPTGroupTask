@@ -1,12 +1,14 @@
 <?php
 
+$userName = "";
+
 ?>
 
 <?php require 'templates/header.php'; ?>
 
 
-<div class="isUserReady py-4 text-center bg-primary">
-    <h3>Gotowy na quiz?</h3>
+<div class="isUserReady py-4 text-center bg-white">
+    <h2 class="text-primary display-3 my-4">Gotowy na quiz?</h2>
     <button class="userReady btn btn-primary">TAK!</button>
 </div>
 
@@ -19,7 +21,7 @@
 
     <!-- quiz -->
 
-    <div class="quiz py-4 bg-primary">
+    <div class="quiz py-5 px-5 pl-5 pr-5 bg-primary">
         <div class="container">
 
     <!--results-->
@@ -29,7 +31,7 @@
                 </div>
                 <br>
                 <label for="name">Podaj swoje imię: </label>
-                <input type="text" name="userName" required/>
+                <input type="text" name="userName" value="<?= htmlspecialchars($userName); ?>" required/>
                 <button type="submit">Zapisz wynik</button>
             </form>
 

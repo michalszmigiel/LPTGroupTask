@@ -20,16 +20,19 @@ const renderQuestions = () => {
                     <p class="lead font-weight-normal">${q.question}</p>
                 </div>
                 <div class="form-check my-2 text-white-50">
-                    <input type="radio" name="q${q.id}" value="A" required>
-                    <label class="form-check-label">${q.answers[0]}</label>
+                    <label class="form-check-label">
+                        <input type="radio" name="q${q.id}" value="A" required>
+                    ${q.answers[0].toUpperCase()}</label>
+                </div>
+                <div class="form-check my-2 text-white-50">                    
+                <label class="form-check-label">
+                        <input type="radio" name="q${q.id}" value="B">
+                    ${q.answers[1].toUpperCase()}</label>
                 </div>
                 <div class="form-check my-2 text-white-50">
-                    <input type="radio" name="q${q.id}" value="B">
-                    <label class="form-check-label">${q.answers[1]}</label>
-                </div>
-                <div class="form-check my-2 text-white-50">
-                    <input type="radio" name="q${q.id}" value="C">
-                    <label class="form-check-label">${q.answers[2]}</label>
+                    <label class="form-check-label">
+                        <input type="radio" name="q${q.id}" value="C">
+                    ${q.answers[2].toUpperCase()}</label>
                 </div>
     `;
 

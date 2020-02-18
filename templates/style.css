@@ -1,0 +1,15 @@
+body {
+    width: 75%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.results-table {
+    text-align: center;
+}
+
+.quiz, .isUserReady {
+    border-radius: 25px;
+}

@@ -1,0 +1,11 @@
+create schema quiz;
+
+create table quizStats
+(
+	id int auto_increment,
+	userName varchar(255) not null,
+	score int not null,
+	constraint quizStats_pk
+		primary key (id)
+);
+
