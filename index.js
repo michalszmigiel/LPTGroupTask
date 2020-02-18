@@ -20,7 +20,7 @@ const renderQuestions = () => {
                     <p class="lead font-weight-normal">${q.question}</p>
                 </div>
                 <div class="form-check my-2 text-white-50">
-                    <input type="radio" name="q${q.id}" value="A">
+                    <input type="radio" name="q${q.id}" value="A" required>
                     <label class="form-check-label">${q.answers[0]}</label>
                 </div>
                 <div class="form-check my-2 text-white-50">
@@ -40,22 +40,28 @@ const renderQuestions = () => {
 const correctAnswers = questions.map(q => q.correctAnswer);
 
 quizForm.addEventListener('submit', e => {
-   e.preventDefault();
-   let score = 0;
-   const userAnswers = [quizForm.q1.value, quizForm.q2.value, quizForm.q3.value, quizForm.q4.value];
+    e.preventDefault();
+    let score = 0;
+    const userAnswers = [quizForm.q1.value, quizForm.q2.value, quizForm.q3.value, quizForm.q4.value];
 
-   userAnswers.forEach((userAnswer, index) => {
-       userAnswer === correctAnswers[index] ? score += 25 : score;
-   });
+    userAnswers.forEach((userAnswer, index) => {
+        userAnswer === correctAnswers[index] ? score += 25 : score;
+    });
 
     console.log(score);
     console.log(userAnswers);
 
     results.classList.remove('d-none');
-    scrollTo(0,0);
-    results.querySelector('span').textContent = `${score}`;
+    scrollTo(0, 0);
     results.innerHTML += `<input class="d-none" name="score" value="${score}">`;
 
-
-
-});
+    let animatedScore = 0;
+    const timer = setInterval(() => {
+        results.querySelector('span').textContent = `${animatedScore}`;
+        if (animatedScore === score) {
+            clearInterval(timer)
+        } else {
+            animatedScore++;
+        }
+    },20)
+})

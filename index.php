@@ -25,7 +25,7 @@
     <!--results-->
             <form method="post" action="addScore.php" class="results py-4 d-none bg-light text-center">
                 <div class="container lead">
-                    Twój wynik: <span></span> %
+                    Twój wynik: <span class="text-primary display-4  p-3"></span> %
                 </div>
                 <br>
                 <label for="name">Podaj swoje imię: </label>
@@ -38,7 +38,7 @@
                 <div class="quiz-questions">
                 </div>
                 <div class="text-center">
-                    <input type="submit" class="btn btn-light">
+                    <button type="submit" class="btn btn-light">Sprawdź wynik</button>
                 </div>
             </form>
         </div>

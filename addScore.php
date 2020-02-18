@@ -4,7 +4,7 @@ die(var_dump($_POST));
 
 if(isset($_POST['userName']) && isset($_POST['score']))
 {
-    $pdo = new PDO();
+    $pdo = new PDO('');
 }
 
 ?>
