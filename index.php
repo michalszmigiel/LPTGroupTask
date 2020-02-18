@@ -31,7 +31,7 @@ $userName = "";
                 </div>
                 <br>
                 <label for="name">Podaj swoje imię: </label>
-                <input type="text" name="userName" value="<?= htmlspecialchars($userName); ?>" required/>
+                <input type="text" name="userName" value="<?= htmlspecialchars($userName); ?>" required maxlength="255"/>
                 <button type="submit">Zapisz wynik</button>
             </form>
 
